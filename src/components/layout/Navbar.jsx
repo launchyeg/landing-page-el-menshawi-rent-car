@@ -16,7 +16,7 @@ export default function Navbar({ brand, links, contactCta }) {
 
   return (
     <motion.header
-      className="sticky top-0 z-[100] border-b border-border-soft bg-white/90 backdrop-blur-md"
+      className="sticky top-0 z-[100] border-b border-border-soft bg-white"
       initial={{ y: -24, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
@@ -38,7 +38,7 @@ export default function Navbar({ brand, links, contactCta }) {
               >
                 <button
                   type="button"
-                  className="inline-flex items-center gap-1 text-sm font-semibold text-ink-soft transition-colors hover:text-ink"
+                  className="inline-flex items-center gap-1 text-sm font-normal text-ink transition-colors hover:text-primary"
                   aria-expanded={openDropdown === link.label}
                 >
                   {link.label}
@@ -57,7 +57,7 @@ export default function Navbar({ brand, links, contactCta }) {
                         <li key={item.label}>
                           <a
                             href={item.href}
-                            className="block rounded-lg px-3 py-2 text-sm font-medium whitespace-nowrap text-ink-soft hover:bg-surface-alt hover:text-ink"
+                            className="block rounded-lg px-3 py-2 text-sm font-normal whitespace-nowrap text-ink hover:bg-surface-alt hover:text-primary"
                           >
                             {item.label}
                           </a>
@@ -71,7 +71,7 @@ export default function Navbar({ brand, links, contactCta }) {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm font-semibold text-ink-soft transition-colors hover:text-ink"
+                className="text-sm font-normal text-ink transition-colors hover:text-primary"
               >
                 {link.label}
               </a>
@@ -89,14 +89,16 @@ export default function Navbar({ brand, links, contactCta }) {
           </a>
           <button
             type="button"
-            className="hidden h-10.5 w-10.5 items-center justify-center rounded-full border border-border text-ink min-[900px]:inline-flex"
+            className="hidden h-10.5 w-10.5 items-center justify-center rounded-full border border-border hover:border-ink transition-colors text-ink min-[900px]:inline-flex"
             aria-label="Account"
           >
             <FiUser aria-hidden="true" />
           </button>
           <button
             type="button"
-            className="inline-flex h-10.5 w-10.5 items-center justify-center rounded-full border border-border text-lg text-ink min-[900px]:hidden"
+            className={`inline-flex h-10.5 w-10.5 items-center justify-center rounded-full border text-lg transition-colors min-[900px]:hidden ${
+              isOpen ? "border-ink text-ink" : "border-border-soft text-ink"
+            }`}
             aria-label={isOpen ? "Close menu" : "Open menu"}
             aria-expanded={isOpen}
             onClick={() => setIsOpen((v) => !v)}
@@ -153,6 +155,14 @@ export default function Navbar({ brand, links, contactCta }) {
               >
                 {contactCta.label}
                 <FiPhone aria-hidden="true" />
+              </a>
+              <a
+                href="#"
+                className="btn btn-outline mt-2 w-full"
+                onClick={() => setIsOpen(false)}
+              >
+                Admin
+                <FiUser aria-hidden="true" />
               </a>
             </div>
           </motion.nav>
