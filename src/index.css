@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+/*
+  Design tokens for the El Menshawi landing page, expressed as Tailwind v4
+  theme variables. Each --color-name, --font-name, --shadow-name entry below
+  generates matching utilities automatically (e.g. --color-primary becomes
+  bg-primary, text-primary, border-primary). Edit values here to re-theme
+  the whole site.
+*/
+@theme {
+  --color-primary: #3457ff;
+  --color-primary-dark: #2542d1;
+  --color-tag-bg: #eef1ff;
+
+  --color-ink: #0e1116;
+  --color-ink-soft: #5b6270;
+  --color-ink-faint: #8b93a1;
+
+  --color-surface-alt: #f4f5f8;
+  --color-surface-alt-2: #eef0f4;
+  --color-border: #e5e7eb;
+  --color-border-soft: #edeef1;
+
+  --color-dark: #0b0d12;
+  --color-dark-soft: #171a22;
+  --color-dark-border: #2a2e38;
+
+  --font-heading: "Plus Jakarta Sans", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+
+  --shadow-card: 0 8px 24px rgba(14, 17, 22, 0.06);
+  --shadow-card-hover: 0 16px 40px rgba(14, 17, 22, 0.12);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-ink font-body antialiased;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+@layer components {
+  .wrap {
+    margin-inline: auto;
+    width: min(100% - 2.5rem, 1296px);
+  }
+
+  .section {
+    @apply py-14 sm:py-16 lg:py-24;
+  }
+
+  .section-alt {
+    @apply bg-surface-alt;
+  }
+
+  .eyebrow {
+    @apply mb-3 inline-block text-xs font-bold tracking-[0.14em] text-primary uppercase;
+  }
+
+  .section-heading {
+    @apply max-w-[40ch] font-heading text-3xl font-bold tracking-tight text-ink sm:text-4xl lg:text-5xl;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full border border-transparent px-6 py-3 text-sm font-semibold transition-colors duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark;
+  }
+
+  .btn-light {
+    @apply border-white bg-white text-ink hover:border-white;
+  }
+
+  .btn-outline {
+    @apply border-border bg-transparent text-ink hover:border-primary hover:text-primary;
+  }
+}
