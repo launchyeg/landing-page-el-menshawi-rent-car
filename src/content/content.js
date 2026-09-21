@@ -11,7 +11,7 @@ export const contact = {
     href: "https://maps.app.goo.gl/nFxTCEnzmupdo7yK7?g_st=ic",
   },
   email: { label: "Email", value: "elmenshawi@gmail.com" },
-  phone: { label: "Phone", value: "+201270951250" },
+  phone: { label: "Phone", value: "+201229082268" },
 };
 
 export const social = [
