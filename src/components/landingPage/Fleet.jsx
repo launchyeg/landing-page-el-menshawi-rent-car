@@ -62,7 +62,7 @@ export default function Fleet({ id, eyebrow, heading, cars }) {
                         key={key}
                         className="inline-flex items-center gap-1.5 text-sm text-ink-soft"
                       >
-                        <Icon aria-hidden="true" />
+                        {Icon && <Icon aria-hidden="true" />}
                         {car.specs[key]}
                       </li>
                     );

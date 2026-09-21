@@ -1,9 +1,15 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { FiArrowLeft, FiArrowRight, FiPlay } from "react-icons/fi";
+import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import { fadeUp, viewportOnce } from "../../lib/motion";
+import { LuUserRound } from "react-icons/lu";
 
-export default function Testimonials({ eyebrow, heading, items, video }) {
+const image = {
+  src: "https://res.cloudinary.com/dirbnpgsp/image/upload/v1789999369/Workspace/elmenshawi/669625551_1386624373483924_1465861422971480067_n_c1fth8.jpg",
+  alt: "Woman smiling behind the wheel of a car",
+};
+
+export default function Testimonials({ eyebrow, heading, items }) {
   const [index, setIndex] = useState(0);
   const active = items[index];
 
@@ -25,17 +31,18 @@ export default function Testimonials({ eyebrow, heading, items, video }) {
 
           <div className="relative mt-7 overflow-hidden rounded-2xl bg-white p-8 shadow-card">
             <span
-              className="absolute top-2 right-6 font-serif text-6xl leading-none text-border"
+              className="absolute top-2 right-6 font-serif text-8xl leading-none text-border"
               aria-hidden="true"
             >
               &ldquo;
             </span>
             <div className="mb-4">
-              <img
-                src={active.avatar}
-                alt=""
-                className="h-12 w-12 rounded-full object-cover"
-              />
+              <span
+                className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-surface-alt text-xl text-ink-faint"
+                aria-hidden="true"
+              >
+                <LuUserRound />
+              </span>
             </div>
             <AnimatePresence mode="wait">
               <motion.p
@@ -82,19 +89,10 @@ export default function Testimonials({ eyebrow, heading, items, video }) {
           transition={{ delay: 0.15 }}
         >
           <img
-            src={video.src}
-            alt={video.alt}
+            src={image.src}
+            alt={image.alt}
             className="aspect-4/3 h-full w-full object-cover"
           />
-          <motion.button
-            type="button"
-            aria-label="Play testimonial video"
-            className="absolute top-1/2 left-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/90 text-xl text-ink shadow-card-hover"
-            whileHover={{ scale: 1.08 }}
-            whileTap={{ scale: 0.94 }}
-          >
-            <FiPlay aria-hidden="true" />
-          </motion.button>
         </motion.div>
       </div>
     </section>

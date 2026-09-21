@@ -6,7 +6,7 @@ import Services from "../components/landingPage/Services";
 import Promo from "../components/landingPage/Promo";
 import RentalCategories from "../components/landingPage/RentalCategories";
 import Testimonials from "../components/landingPage/Testimonials";
-import AppPromo from "../components/landingPage/AppPromo";
+import Booking from "../components/landingPage/Booking";
 import {
   hero,
   carTypes,
@@ -16,7 +16,10 @@ import {
   promo,
   rentalCategories,
   testimonials,
-  appPromo,
+  booking,
+  contact,
+  social,
+  termsAndPrivacy,
 } from "../content/content";
 
 // Every section of the landing page, in the order they're rendered on the
@@ -33,7 +36,13 @@ export default function LandingPage() {
       <Promo {...promo} />
       <RentalCategories {...rentalCategories} />
       <Testimonials {...testimonials} />
-      <AppPromo {...appPromo} />
+      <Booking
+        {...booking}
+        contact={contact}
+        social={social}
+        carTypeOptions={carTypes.items.map((item) => item.label)}
+        termsAndPrivacy={termsAndPrivacy}
+      />
     </>
   );
 }

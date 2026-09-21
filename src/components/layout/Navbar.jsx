@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { FiMenu, FiPhone, FiUser, FiX } from "react-icons/fi";
+import { FiMenu, FiPhone, FiX } from "react-icons/fi";
+import { LuUserRound } from "react-icons/lu";
 import Brand from "./Brand";
-
 export default function Navbar({ brand, links, contactCta }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -51,7 +51,7 @@ export default function Navbar({ brand, links, contactCta }) {
             className="hidden h-10.5 w-10.5 items-center justify-center rounded-full border border-border hover:border-ink transition-colors text-ink min-[900px]:inline-flex"
             aria-label="Account"
           >
-            <FiUser aria-hidden="true" />
+            <LuUserRound aria-hidden="true" />
           </button>
           <button
             type="button"
@@ -127,7 +127,7 @@ export default function Navbar({ brand, links, contactCta }) {
                   onClick={() => setIsOpen(false)}
                 >
                   Admin
-                  <FiUser aria-hidden="true" />
+                  <LuUserRound aria-hidden="true" />
                 </a>
               </div>
             </motion.nav>

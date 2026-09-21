@@ -49,31 +49,6 @@ function svgPlaceholder({ name, label, w, h }) {
 </svg>`;
 }
 
-function svgQr({ name, w, h }) {
-  const seed = hashString(name);
-  const cells = 21;
-  const cell = Math.floor(Math.min(w, h) / cells);
-  const size = cell * cells;
-  let rand = seed;
-  const next = () => {
-    rand = (rand * 1103515245 + 12345) >>> 0;
-    return rand / 0xffffffff;
-  };
-  let squares = "";
-  for (let y = 0; y < cells; y++) {
-    for (let x = 0; x < cells; x++) {
-      const isFinder =
-        (x < 7 && y < 7) || (x > cells - 8 && y < 7) || (x < 7 && y > cells - 8);
-      const on = isFinder ? (x % 6 === 0 || y % 6 === 0 || (x > 1 && x < 5 && y > 1 && y < 5)) : next() > 0.55;
-      if (on) squares += `<rect x="${x * cell}" y="${y * cell}" width="${cell}" height="${cell}" fill="#0E1116"/>`;
-    }
-  }
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${size} ${size}">
-  <rect width="${size}" height="${size}" fill="#ffffff"/>
-  ${squares}
-</svg>`;
-}
-
 const images = [
   { name: "hero-bg", label: "Hero — City Drive", w: 1600, h: 1000 },
   { name: "car-type-sports", label: "Sports", w: 600, h: 450 },
@@ -96,18 +71,15 @@ const images = [
   { name: "rental-category-family", label: "Family", w: 450, h: 600 },
   { name: "rental-category-adventure", label: "Adventure", w: 450, h: 600 },
   { name: "rental-category-wedding", label: "Wedding", w: 450, h: 600 },
-  { name: "testimonial-avatar", label: "Avatar", w: 100, h: 100 },
   { name: "testimonial-video", label: "Video Testimonial", w: 700, h: 600 },
   { name: "blog-post-1", label: "Blog — Road Trips", w: 600, h: 400 },
   { name: "blog-post-2", label: "Blog — Eco Friendly", w: 600, h: 400 },
   { name: "blog-post-3", label: "Blog — Safe Driving", w: 600, h: 400 },
-  { name: "app-phone", label: "App Preview", w: 500, h: 600 },
 ];
 
 for (const img of images) {
   const content = svgPlaceholder(img);
   writeFileSync(join(outDir, `${img.name}.svg`), content, "utf8");
 }
-writeFileSync(join(outDir, "app-qr.svg"), svgQr({ name: "app-qr", w: 220, h: 220 }), "utf8");
 
-console.log(`Generated ${images.length + 1} placeholder images in ${outDir}`);
+console.log(`Generated ${images.length} placeholder images in ${outDir}`);

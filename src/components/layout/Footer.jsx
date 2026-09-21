@@ -1,16 +1,22 @@
+import { useState } from "react";
 import { FiMail, FiMapPin, FiPhone } from "react-icons/fi";
 import Brand from "./Brand";
+import TermsModal from "../landingPage/TermsModal";
 import { socialIcons } from "../../lib/icons";
 
 export default function Footer({
   id,
   brand,
   copyright,
-  developer,
+  development,
   columns,
   contact,
   social,
+  termsAndPrivacy,
 }) {
+  const [termsOpen, setTermsOpen] = useState(false);
+  const whatsappHref = social.find((item) => item.platform === "whatsapp")?.href;
+
   return (
     <footer className="bg-dark pt-16 text-white/75" id={id}>
       <div className="wrap grid gap-10 pb-10 lg:grid-cols-[0.8fr_1.6fr]">
@@ -26,16 +32,47 @@ export default function Footer({
                 {column.title}
               </h3>
               <ul className="flex flex-col gap-2.5">
-                {column.links.map((link) => (
-                  <li key={link.label}>
-                    <a
-                      href={link.href}
-                      className="text-sm text-white/80 transition-colors hover:text-primary"
-                    >
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
+                {column.links.map((link) => {
+                  const className =
+                    "text-sm text-white/80 transition-colors hover:text-primary";
+
+                  if (link.action === "terms") {
+                    return (
+                      <li key={link.label}>
+                        <button
+                          type="button"
+                          onClick={() => setTermsOpen(true)}
+                          className={className}
+                        >
+                          {link.label}
+                        </button>
+                      </li>
+                    );
+                  }
+
+                  if (link.action === "whatsapp") {
+                    return (
+                      <li key={link.label}>
+                        <a
+                          href={whatsappHref}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={className}
+                        >
+                          {link.label}
+                        </a>
+                      </li>
+                    );
+                  }
+
+                  return (
+                    <li key={link.label}>
+                      <a href={link.href} className={className}>
+                        {link.label}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}
@@ -92,7 +129,7 @@ export default function Footer({
         <div className="text-white/50">
           <span>{copyright}</span> Developed by{" "}
           <a
-            href={developer}
+            href={development}
             className="text-white hover:text-white/50 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
@@ -118,6 +155,12 @@ export default function Footer({
           })}
         </div>
       </div>
+
+      <TermsModal
+        open={termsOpen}
+        onClose={() => setTermsOpen(false)}
+        data={termsAndPrivacy[0]}
+      />
     </footer>
   );
 }

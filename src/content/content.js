@@ -4,11 +4,40 @@ export const brand = {
   href: "#top",
 };
 
+export const contact = {
+  office: {
+    label: "Office",
+    value: "84511 Elkawther street, Hurghada, Red Sea Governorate",
+  },
+  email: { label: "Email", value: "info@example.io" },
+  phone: { label: "Phone", value: "+201270951250" },
+};
+
+export const social = [
+  {
+    platform: "facebook",
+    href: "https://www.facebook.com/ElmenshawiRentCarHurghada/",
+  },
+  {
+    platform: "instagram",
+    href: "https://www.instagram.com/elmenshawi.rent.car/",
+  },
+  {
+    platform: "whatsapp",
+    href: `https://wa.me/${contact.phone.value.replace(/\D/g, "")}`,
+  },
+  {
+    platform: "location",
+    href: "https://maps.app.goo.gl/nFxTCEnzmupdo7yK7?g_st=ic",
+  },
+];
+
 export const navbar = {
   links: [
-    { label: "About us", href: "#about" },
+    { label: "About Us", href: "#about" },
     { label: "Car Fleet", href: "#fleet" },
-    { label: "Services", href: "#services" },
+    { label: "Our Services", href: "#services" },
+    { label: "Book Now", href: "#book" },
   ],
   contactCta: { label: "Contact us", href: "#footer" },
 };
@@ -276,7 +305,7 @@ export const promo = {
       alt: "Hand holding a car key",
     },
     heading: "Affordable rentals, premium cars, unmatched service",
-    cta: { label: "Rent a Car", href: "#fleet" },
+    cta: { label: "Rent a Car", href: "#booking" },
   },
   experience: {
     image: {
@@ -341,96 +370,128 @@ export const testimonials = {
     {
       id: 1,
       quote:
-        "This is by far the best car rental service I've ever used. From the moment I made the booking, I knew I was in good hands. The website was easy to navigate & the rates were competitive.",
-      name: "Leslie Alexander",
-      avatar: "/images/testimonial-avatar.svg",
+        "Renting a Hyundai Tucson from El Menshawi was seamless. The car was brand new, spotless, and handed over right on time in El Kawther. Exceptional service!",
+      name: "Mark Stevens",
     },
     {
       id: 2,
       quote:
-        "Booking was effortless and the car was spotless at pickup. Customer support answered every question within minutes — I'll be renting with El Menshawi again on my next trip.",
-      name: "Marcus Bennett",
-      avatar: "/images/testimonial-avatar.svg",
+        "Flexible pickup times and transparent pricing made planning our Red Sea road trip so much easier. Highly recommend El Menshawi to anyone visiting Hurghada.",
+      name: "Amara Okafor",
     },
     {
       id: 3,
       quote:
-        "Flexible pickup times and transparent pricing made planning our road trip so much easier. Highly recommend El Menshawi to anyone who wants a hassle-free rental experience.",
-      name: "Amara Okafor",
-      avatar: "/images/testimonial-avatar.svg",
+        "Best car rental experience in Hurghada! The staff is professional, the 2026 models are in top condition, and no hidden fees at all.",
+      name: "Karim El-Sayed",
+    },
+    {
+      id: 4,
+      quote:
+        "Outstanding customer support and smoothly arranged airport delivery. Drives around Hurghada were super comfortable with our Tiggo 8 Pro.",
+      name: "Elena Rostova",
+    },
+    {
+      id: 5,
+      quote:
+        "Great daily rates for brand new cars. Booking was quick and easy over WhatsApp, and the team in El Kawther made everything effortless.",
+      name: "David Miller",
     },
   ],
-  video: {
-    src: "/images/testimonial-video.svg",
-    alt: "Woman smiling behind the wheel of a car",
+};
+
+export const booking = {
+  id: "booking",
+  eyebrow: "Get In Touch",
+  heading: "Book Your Ride",
+  intro:
+    "Have questions about our services or need assistance with your car rental? Our dedicated team is here to help you every step of the way.",
+  findUsLabel: "Find us:",
+  followLabel: "Follow on us:",
+  form: {
+    firstName: { label: "First name", placeholder: "Enter first name" },
+    lastName: { label: "Last name", placeholder: "Enter last name" },
+    email: { label: "Email", placeholder: "you@example.com" },
+    phone: { label: "Phone", placeholder: "+20 1xx xxx xxxx" },
+    pickupDate: { label: "Pick-up date" },
+    dropoffDate: { label: "Drop-off date" },
+    carType: { label: "Car type", placeholder: "Select a car type" },
+    message: { label: "Message", placeholder: "Tell us about your trip" },
+    consentLabel: "I agree to the",
+    termsLabel: "Terms & Conditions",
+    privacyLabel: "Privacy Policy",
+    submitLabel: "Book Now",
   },
 };
 
-export const appPromo = {
-  heading: "Experience travel ease with our app",
-  description:
-    "Experience by scanning the QR code to instantly download our app and access seamless car rental services at your fingertips.",
-  note: "Scan the QR code with your device camera and download the app.",
-  phoneImage: {
-    src: "/images/app-phone.svg",
-    alt: "Phone showing the El Menshawi app",
+export const termsAndPrivacy = [
+  {
+    id: "terms-and-privacy",
+    title: "Terms of Service & Privacy Policy",
+    lastUpdated: "September 2026",
+    sections: [
+      {
+        heading: "1. Driver Requirements",
+        content:
+          "Renters must be at least 21 years old and hold a valid Egyptian driving license or an official International Driving Permit for foreign visitors.",
+      },
+      {
+        heading: "2. Vehicle Usage & Guidelines",
+        content:
+          "All vehicles are for personal transportation on paved roads. Off-roading, racing, or using vehicles for unauthorized commercial transport is strictly prohibited.",
+      },
+      {
+        heading: "3. Payment, Deposits & Fuel",
+        content:
+          "Rental rates are calculated on a 24-hour basis. Payments and security deposits are settled upon delivery, and vehicles must be returned with the same fuel level as received.",
+      },
+      {
+        heading: "4. Information Collection & Use",
+        content:
+          "We collect personal details (name, phone number, ID/Passport, driving license) solely to process rental agreements, verify legal status, and provide customer support.",
+      },
+      {
+        heading: "5. Data Security & Contact",
+        content:
+          "Your data is protected using security measures and will never be shared with third parties. For inquiries, visit our office in El Kawther, Hurghada, or contact El Menshawi Car Rent directly.",
+      },
+    ],
   },
-  qrImage: {
-    src: "/images/app-qr.svg",
-    alt: "QR code to download the El Menshawi app",
-  },
-};
+];
 
 export const footer = {
   id: "footer",
   copyright: "© 2026 El Menshawi.",
-  developer: "https://aaaportfolio.vercel.app/",
+  development: "https://aaaportfolio.vercel.app/",
   columns: [
     {
       title: "What We Do",
       links: [
-        { label: "Intercity Rides", href: "#" },
-        { label: "24/7 Road Assistant", href: "#" },
-        { label: "Chauffeur Services", href: "#" },
-        { label: "Long-Term Leasing", href: "#" },
-        { label: "Airport Transfers", href: "#" },
-        { label: "Business Travel Packages", href: "#" },
+        { label: "Daily Rental", href: "#services" },
+        { label: "Airport Transfers", href: "#services" },
+        { label: "Long-Term Leasing", href: "#services" },
+        { label: "Chauffeur Services", href: "#services" },
+        { label: "Intercity Rides", href: "#services" },
       ],
     },
     {
       title: "Pages",
       links: [
-        { label: "About us", href: "#about" },
-        { label: "Category", href: "#car-types" },
-        { label: "Services", href: "#services" },
+        { label: "Home", href: "#top" },
+        { label: "About Us", href: "#about" },
         { label: "Car Fleet", href: "#fleet" },
-        { label: "Contact us", href: "#footer" },
+        { label: "Our Services", href: "#services" },
+        { label: "Book Now", href: "#book" },
       ],
     },
     {
       title: "Resources",
       links: [
-        { label: "Reviews", href: "#testimonials" },
-        { label: "FAQ", href: "#" },
-        { label: "Privacy Policy", href: "#" },
-        { label: "Terms & Conditions", href: "#" },
-        { label: "Cancellation Policy", href: "#" },
-        { label: "License", href: "#" },
+        { label: "Testimonials", href: "#testimonials" },
+        { label: "Terms & Conditions", action: "terms" },
+        { label: "Privacy Policy", action: "terms" },
+        { label: "Contact Us", action: "whatsapp" },
       ],
     },
-  ],
-  contact: {
-    office: {
-      label: "Office",
-      value: "4517 Washington Ave. Manchester, Kentucky 39495",
-    },
-    email: { label: "Email", value: "info@example.io" },
-    phone: { label: "Phone", value: "+1 (378) 555-0108" },
-  },
-  social: [
-    { platform: "facebook", href: "#" },
-    { platform: "instagram", href: "#" },
-    { platform: "twitter", href: "#" },
-    { platform: "youtube", href: "#" },
   ],
 };

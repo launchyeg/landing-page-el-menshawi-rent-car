@@ -3,12 +3,26 @@ import Footer from "./Footer";
 
 // The page chrome shared by every page: the navbar and footer frame whatever
 // page content is passed in as children.
-export default function Layout({ brand, navbar, footer, children }) {
+export default function Layout({
+  brand,
+  navbar,
+  footer,
+  contact,
+  social,
+  termsAndPrivacy,
+  children,
+}) {
   return (
     <>
       <Navbar brand={brand} {...navbar} />
       <main>{children}</main>
-      <Footer brand={brand} {...footer} />
+      <Footer
+        brand={brand}
+        contact={contact}
+        social={social}
+        termsAndPrivacy={termsAndPrivacy}
+        {...footer}
+      />
     </>
   );
 }
