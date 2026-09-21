@@ -33,7 +33,7 @@ export default function CarTypes({ eyebrow, heading, items }) {
             <motion.a
               key={item.id}
               href={item.href}
-              className="group relative block aspect-4/3 overflow-hidden rounded-2xl bg-ink"
+              className="group relative block aspect-[3.5/4] overflow-hidden rounded-2xl bg-ink"
               variants={staggerItem}
               whileHover="hover"
             >
@@ -45,11 +45,11 @@ export default function CarTypes({ eyebrow, heading, items }) {
                 transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               />
               <div className="absolute inset-0 bg-linear-to-b from-[rgba(11,13,18,0.05)] to-[rgba(11,13,18,0.55)]" />
-              <span className="absolute top-4.5 left-4.5 text-base font-bold text-white">
+              <span className="absolute bottom-4.5 left-4.5 text-lg font-bold text-white">
                 {item.label}
               </span>
               <motion.span
-                className="absolute right-4 bottom-4 inline-flex h-8.5 w-8.5 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur-sm"
+                className="absolute right-4 bottom-4 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/15 text-white backdrop-blur-sm"
                 variants={{ hover: { rotate: 45 } }}
                 transition={{ duration: 0.25 }}
               >

@@ -4,6 +4,7 @@ import { staggerContainer, staggerItem } from "../../lib/motion";
 
 export default function Hero({
   heading,
+  subheading,
   subtext,
   primaryCta,
   secondaryCta,
@@ -28,10 +29,16 @@ export default function Hero({
       >
         <motion.h1
           variants={staggerItem}
-          className="max-w-5xl font-heading text-[clamp(2.25rem,4vw+1rem,3.75rem)] font-bold tracking-tight text-white"
+          className="max-w-3xl font-heading text-[clamp(2.25rem,4vw+1rem,3.75rem)] leading-tight font-bold tracking-tight text-white"
         >
           {heading}
         </motion.h1>
+        <motion.h2
+          variants={staggerItem}
+          className="-mt-1 max-w-3xl font-heading text-[clamp(2.25rem,4vw+1rem,3.25rem)] leading-tight font-semibold tracking-tight text-primary"
+        >
+          {subheading}
+        </motion.h2>
         <motion.p
           variants={staggerItem}
           className="mt-5 max-w-4xl text-lg text-white/85"
@@ -44,21 +51,27 @@ export default function Hero({
         >
           <motion.a
             href={primaryCta.href}
-            className="btn btn-light"
+            className="btn btn-light group"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.96 }}
           >
             {primaryCta.label}
-            <FiArrowUpRight aria-hidden="true" />
+            <FiArrowUpRight
+              aria-hidden="true"
+              className="transition-transform duration-300 group-hover:rotate-45"
+            />
           </motion.a>
           <motion.a
             href={secondaryCta.href}
-            className="btn border-white/50 bg-transparent text-white hover:border-white"
+            className="btn group border-white/50 bg-transparent text-white hover:border-white"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.96 }}
           >
             {secondaryCta.label}
-            <FiArrowUpRight aria-hidden="true" />
+            <FiArrowUpRight
+              aria-hidden="true"
+              className="transition-transform duration-300 group-hover:rotate-45"
+            />
           </motion.a>
         </motion.div>
       </motion.div>
