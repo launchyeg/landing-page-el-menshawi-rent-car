@@ -36,6 +36,8 @@ export default function About({
               src={image.src}
               alt={image.alt}
               className="aspect-4/3 h-full w-full object-cover"
+              loading="lazy"
+              decoding="async"
             />
           </motion.div>
 

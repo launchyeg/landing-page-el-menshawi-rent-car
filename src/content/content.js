@@ -51,7 +51,7 @@ export const hero = {
   primaryCta: { label: "Booking Now", href: "#booking" },
   secondaryCta: { label: "See All Cars", href: "#fleet" },
   image: {
-    src: "https://res.cloudinary.com/dirbnpgsp/image/upload/v1789989551/Workspace/elmenshawi/706595150_18041092562628614_2115252401596689539_n_lgaesz.jpg",
+    src: "https://res.cloudinary.com/dirbnpgsp/image/upload/f_auto,q_auto,w_1920/v1789989551/Workspace/elmenshawi/706595150_18041092562628614_2115252401596689539_n_lgaesz.jpg",
     alt: "El Menshawi Rent Car",
   },
 };
@@ -64,28 +64,28 @@ export const carTypes = {
       id: "luxury",
       label: "Luxury",
       image:
-        "https://res.cloudinary.com/dirbnpgsp/image/upload/v1789985043/Workspace/elmenshawi/WhatsApp_Image_2026-09-20_at_22.10.11_e1tywn.jpg",
+        "https://res.cloudinary.com/dirbnpgsp/image/upload/f_auto,q_auto,w_600/v1789985043/Workspace/elmenshawi/WhatsApp_Image_2026-09-20_at_22.10.11_e1tywn.jpg",
       href: "#booking",
     },
     {
       id: "sedan",
       label: "Sedan",
       image:
-        "https://res.cloudinary.com/dirbnpgsp/image/upload/v1789986411/Workspace/elmenshawi/753541250_18049864145628614_1449880406198340291_n_wme2dj.jpg",
+        "https://res.cloudinary.com/dirbnpgsp/image/upload/f_auto,q_auto,w_600/v1789986411/Workspace/elmenshawi/753541250_18049864145628614_1449880406198340291_n_wme2dj.jpg",
       href: "#booking",
     },
     {
       id: "suv",
       label: "SUV",
       image:
-        "https://res.cloudinary.com/dirbnpgsp/image/upload/v1789986625/Workspace/elmenshawi/754142567_18049864142628614_8273999791725079766_n_nibo1s.jpg",
+        "https://res.cloudinary.com/dirbnpgsp/image/upload/f_auto,q_auto,w_600/v1789986625/Workspace/elmenshawi/754142567_18049864142628614_8273999791725079766_n_nibo1s.jpg",
       href: "#booking",
     },
     {
       id: "economy",
       label: "Economy",
       image:
-        "https://res.cloudinary.com/dirbnpgsp/image/upload/v1789986775/Workspace/elmenshawi/660107234_18032434292628614_3773229428010826428_n_cewqay.jpg",
+        "https://res.cloudinary.com/dirbnpgsp/image/upload/f_auto,q_auto,w_600/v1789986775/Workspace/elmenshawi/660107234_18032434292628614_3773229428010826428_n_cewqay.jpg",
       href: "#booking",
     },
   ],
@@ -95,7 +95,7 @@ export const about = {
   id: "about",
   heading: "The story behind our commitment to quality and service",
   image: {
-    src: "https://res.cloudinary.com/dirbnpgsp/image/upload/v1789985099/Workspace/elmenshawi/707434600_18041101352628614_4308445507500434762_n_jgk9et.jpg",
+    src: "https://res.cloudinary.com/dirbnpgsp/image/upload/f_auto,q_auto,w_900/v1789985099/Workspace/elmenshawi/707434600_18041101352628614_4308445507500434762_n_jgk9et.jpg",
     alt: "El Menshawi founding team smiling together",
   },
   panelTitle: "Established in Hurghada",
@@ -281,11 +281,11 @@ export const services = {
   heading: "Our Services",
   images: {
     main: {
-      src: "https://res.cloudinary.com/dirbnpgsp/video/upload/v1789993433/Workspace/elmenshawi/WhatsApp_Video_2026-09-21_at_15.22.39_dtfti0.mp4",
+      src: "https://res.cloudinary.com/dirbnpgsp/video/upload/q_auto,f_auto,w_1000/v1789993433/Workspace/elmenshawi/WhatsApp_Video_2026-09-21_at_15.22.39_dtfti0.mp4",
       alt: "Driver's point of view steering through the city",
     },
     secondary: {
-      src: "https://res.cloudinary.com/dirbnpgsp/image/upload/v1789986772/Workspace/elmenshawi/649251568_18028696208628614_51804009530412269_n_wcbqq1.webp",
+      src: "https://res.cloudinary.com/dirbnpgsp/image/upload/f_auto,q_auto,w_800/v1789986772/Workspace/elmenshawi/649251568_18028696208628614_51804009530412269_n_wcbqq1.webp",
       alt: "Luxury car with gull-wing door open",
     },
   },
@@ -302,7 +302,7 @@ export const services = {
 export const promo = {
   card: {
     image: {
-      src: "https://res.cloudinary.com/dirbnpgsp/image/upload/v1789994555/Workspace/elmenshawi/675196f9d0ac88495bd32238_cards-01-p-500_mc0ayz.jpg",
+      src: "https://res.cloudinary.com/dirbnpgsp/image/upload/f_auto,q_auto,w_900/v1789994555/Workspace/elmenshawi/675196f9d0ac88495bd32238_cards-01-p-500_mc0ayz.jpg",
       alt: "Hand holding a car key",
     },
     heading: "Affordable rentals, premium cars, unmatched service",
@@ -310,7 +310,7 @@ export const promo = {
   },
   experience: {
     image: {
-      src: "https://res.cloudinary.com/dirbnpgsp/image/upload/v1789994669/Workspace/elmenshawi/675196f22d1e5c9c1fae7a5a_cards-02-p-500_cloleb.jpg",
+      src: "https://res.cloudinary.com/dirbnpgsp/image/upload/f_auto,q_auto,w_900/v1789994669/Workspace/elmenshawi/675196f22d1e5c9c1fae7a5a_cards-02-p-500_cloleb.jpg",
       alt: "Hands exchanging a car key",
     },
     label: "Experience in Car Rentals",
@@ -318,7 +318,7 @@ export const promo = {
   },
   landscape: {
     image: {
-      src: "https://res.cloudinary.com/dirbnpgsp/image/upload/v1789994558/Workspace/elmenshawi/646128647_18027212459628614_79292570416733246_n_aczihg.jpg",
+      src: "https://res.cloudinary.com/dirbnpgsp/image/upload/f_auto,q_auto,w_1000/v1789994558/Workspace/elmenshawi/646128647_18027212459628614_79292570416733246_n_aczihg.jpg",
       alt: "SUV parked on a hilltop landscape",
     },
     tagline:
@@ -349,7 +349,7 @@ export const rentalCategories = {
       id: "crossovers",
       label: "City Crossovers",
       image: {
-        src: "https://res.cloudinary.com/dirbnpgsp/image/upload/v1789996721/Workspace/elmenshawi/663126469_1378548000958228_932231066452021338_n_pseizn.jpg",
+        src: "https://res.cloudinary.com/dirbnpgsp/image/upload/f_auto,q_auto,w_600/v1789996721/Workspace/elmenshawi/663126469_1378548000958228_932231066452021338_n_pseizn.jpg",
         alt: "Off-road vehicle set up for an outdoor adventure",
       },
     },

@@ -4,17 +4,98 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#3457ff" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://elmenshawirentcar.com/" />
+
+    <title>El Menshawi Rent Car — Car Rental in Hurghada, Egypt</title>
     <meta
       name="description"
-      content="El Menshawi Rent Car — rent your ride, anytime, anywhere. Browse our vehicle fleet and book a car rental in minutes."
+      content="El Menshawi Rent Car — rent your ride, anytime, anywhere in Hurghada. Browse our 2026 vehicle fleet of sedans, SUVs and luxury cars, and book in minutes."
     />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="El Menshawi Rent Car" />
+    <meta
+      property="og:title"
+      content="El Menshawi Rent Car — Car Rental in Hurghada, Egypt"
+    />
+    <meta
+      property="og:description"
+      content="Rent your ride, anytime, anywhere in Hurghada. Browse our 2026 vehicle fleet of sedans, SUVs and luxury cars, and book in minutes."
+    />
+    <meta property="og:url" content="https://elmenshawirentcar.com/" />
+    <meta
+      property="og:image"
+      content="https://res.cloudinary.com/dirbnpgsp/image/upload/f_auto,q_auto,w_1200,h_630,c_fill/v1789989551/Workspace/elmenshawi/706595150_18041092562628614_2115252401596689539_n_lgaesz.jpg"
+    />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="El Menshawi Rent Car — Car Rental in Hurghada, Egypt"
+    />
+    <meta
+      name="twitter:description"
+      content="Rent your ride, anytime, anywhere in Hurghada. Browse our 2026 vehicle fleet and book in minutes."
+    />
+    <meta
+      name="twitter:image"
+      content="https://res.cloudinary.com/dirbnpgsp/image/upload/f_auto,q_auto,w_1200,h_630,c_fill/v1789989551/Workspace/elmenshawi/706595150_18041092562628614_2115252401596689539_n_lgaesz.jpg"
+    />
+
+    <!-- Preconnects -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://res.cloudinary.com" />
+
+    <!-- LCP image: fetch it in parallel with the JS bundle instead of waiting on React to render it -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      as="image"
+      fetchpriority="high"
+      href="https://res.cloudinary.com/dirbnpgsp/image/upload/f_auto,q_auto,w_1920/v1789989551/Workspace/elmenshawi/706595150_18041092562628614_2115252401596689539_n_lgaesz.jpg"
     />
-    <title>El Menshawi — Rent Car</title>
+
+    <!-- Load the font stylesheet without blocking first paint, falling back for no-JS -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      />
+    </noscript>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AutoRental",
+        "name": "El Menshawi Rent Car",
+        "image": "https://res.cloudinary.com/dirbnpgsp/image/upload/f_auto,q_auto,w_1200/v1789989551/Workspace/elmenshawi/706595150_18041092562628614_2115252401596689539_n_lgaesz.jpg",
+        "url": "https://elmenshawirentcar.com/",
+        "telephone": "+201229082268",
+        "email": "elmenshawi@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "84511 Elkawther street",
+          "addressLocality": "Hurghada",
+          "addressRegion": "Red Sea Governorate",
+          "addressCountry": "EG"
+        },
+        "sameAs": [
+          "https://www.facebook.com/ElmenshawiRentCarHurghada/",
+          "https://www.instagram.com/elmenshawi.rent.car/"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

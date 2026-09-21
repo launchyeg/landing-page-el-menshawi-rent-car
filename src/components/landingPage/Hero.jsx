@@ -19,6 +19,8 @@ export default function Hero({
         src={image.src}
         alt={image.alt}
         className="absolute inset-0 h-full w-full object-cover object-[center_20%]"
+        fetchPriority="high"
+        decoding="async"
       />
       <div className="absolute inset-0 bg-linear-to-b from-[rgba(11,13,18,0.35)] via-[rgba(11,13,18,0.15)] to-[rgba(11,13,18,0.45)]" />
       <motion.div

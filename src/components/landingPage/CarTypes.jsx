@@ -43,6 +43,8 @@ export default function CarTypes({ eyebrow, heading, items }) {
                 className="absolute inset-0 h-full w-full object-cover"
                 variants={{ hover: { scale: 1.08 } }}
                 transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-linear-to-b from-[rgba(11,13,18,0.05)] to-[rgba(11,13,18,0.40)]" />
               <span className="absolute bottom-4.5 left-4.5 text-lg font-bold text-white">

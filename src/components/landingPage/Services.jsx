@@ -36,6 +36,7 @@ export default function Services({
               loop
               muted
               playsInline
+              preload="metadata"
             />
           </div>
 
@@ -72,6 +73,8 @@ export default function Services({
               src={images.secondary.src}
               alt={images.secondary.alt}
               className="aspect-square w-full object-cover"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <motion.a

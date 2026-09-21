@@ -18,6 +18,8 @@ export default function Promo({ card, experience, landscape }) {
               src={card.image.src}
               alt={card.image.alt}
               className="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-linear-to-b from-[rgba(11,13,18,0.1)] to-[rgba(11,13,18,0.55)]" />
             <div className="relative flex h-full flex-col justify-end gap-4 p-6">
@@ -49,6 +51,8 @@ export default function Promo({ card, experience, landscape }) {
               src={experience.image.src}
               alt={experience.image.alt}
               className="absolute inset-0 h-full w-full object-cover"
+              loading="lazy"
+              decoding="async"
             />
             <div className="absolute inset-0 bg-linear-to-b from-[rgba(11,13,18,0.1)] to-[rgba(11,13,18,0.55)]" />
             <div className="relative flex h-full flex-col justify-end gap-4 p-6 text-white">
@@ -74,6 +78,8 @@ export default function Promo({ card, experience, landscape }) {
             src={landscape.image.src}
             alt={landscape.image.alt}
             className="absolute inset-0 h-full w-full object-cover"
+            loading="lazy"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-linear-to-t from-[rgba(11,13,18,0.7)] via-transparent to-transparent" />
           <div className="relative flex h-full flex-col items-center justify-end p-6">

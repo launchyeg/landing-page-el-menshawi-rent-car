@@ -45,6 +45,8 @@ export default function Fleet({ id, eyebrow, heading, cars }) {
                   src={car.image}
                   alt={car.name}
                   className="h-full w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="p-5 pb-6">

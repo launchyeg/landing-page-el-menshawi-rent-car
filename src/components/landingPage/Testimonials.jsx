@@ -5,7 +5,7 @@ import { fadeUp, viewportOnce } from "../../lib/motion";
 import { LuUserRound } from "react-icons/lu";
 
 const image = {
-  src: "https://res.cloudinary.com/dirbnpgsp/image/upload/v1789999369/Workspace/elmenshawi/669625551_1386624373483924_1465861422971480067_n_c1fth8.jpg",
+  src: "https://res.cloudinary.com/dirbnpgsp/image/upload/f_auto,q_auto,w_900/v1789999369/Workspace/elmenshawi/669625551_1386624373483924_1465861422971480067_n_c1fth8.jpg",
   alt: "Woman smiling behind the wheel of a car",
 };
 
@@ -92,6 +92,8 @@ export default function Testimonials({ eyebrow, heading, items }) {
             src={image.src}
             alt={image.alt}
             className="aspect-4/3 h-full w-full object-cover"
+            loading="lazy"
+            decoding="async"
           />
         </motion.div>
       </div>
