@@ -1,11 +1,6 @@
 import { motion } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
-import {
-  fadeUp,
-  staggerContainer,
-  staggerItem,
-  viewportOnce,
-} from "../../lib/motion";
+import { fadeUp, staggerItem, viewportOnce } from "../../lib/motion";
 import { specIcons } from "../../lib/icons";
 
 const specOrder = ["seats", "bags", "transmission", "fuel"];
@@ -25,18 +20,15 @@ export default function Fleet({ id, eyebrow, heading, cars }) {
           <h2 className="section-heading max-w-none">{heading}</h2>
         </motion.div>
 
-        <motion.div
-          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
-          variants={staggerContainer(0.08)}
-          initial="hidden"
-          whileInView="show"
-          viewport={viewportOnce}
-        >
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {cars.map((car) => (
             <motion.article
               key={car.id}
               className="overflow-hidden rounded-2xl bg-white shadow-card"
               variants={staggerItem}
+              initial="hidden"
+              whileInView="show"
+              viewport={viewportOnce}
               whileHover={{ y: -6 }}
               transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             >
@@ -93,7 +85,7 @@ export default function Fleet({ id, eyebrow, heading, cars }) {
               </div>
             </motion.article>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
