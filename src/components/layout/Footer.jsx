@@ -89,7 +89,14 @@ export default function Footer({
             <span className="font-semibold text-white/45">
               {contact.office.label}
             </span>
-            <span className="text-white/85">{contact.office.value}</span>
+            <a
+              href={contact.office.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/85 hover:text-primary"
+            >
+              {contact.office.value}
+            </a>
           </div>
         </div>
         <div className="flex items-start gap-3 text-sm">

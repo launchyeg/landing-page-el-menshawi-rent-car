@@ -94,9 +94,14 @@ export default function Booking({
 
           <div className="mt-10">
             <p className="mb-3 text-sm font-bold text-ink">{findUsLabel}</p>
-            <p className="mb-4 max-w-xs text-ink-soft">
+            <a
+              href={contact.office.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-4 block max-w-xs text-ink-soft underline decoration-border underline-offset-4 transition-colors hover:text-primary"
+            >
               {contact.office.value}
-            </p>
+            </a>
             <a
               href={`mailto:${contact.email.value}`}
               className="block font-semibold text-ink underline decoration-border underline-offset-4 transition-colors hover:text-primary"

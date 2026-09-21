@@ -8,8 +8,9 @@ export const contact = {
   office: {
     label: "Office",
     value: "84511 Elkawther street, Hurghada, Red Sea Governorate",
+    href: "https://maps.app.goo.gl/nFxTCEnzmupdo7yK7?g_st=ic",
   },
-  email: { label: "Email", value: "info@example.io" },
+  email: { label: "Email", value: "elmenshawi@gmail.com" },
   phone: { label: "Phone", value: "+201270951250" },
 };
 
@@ -28,7 +29,7 @@ export const social = [
   },
   {
     platform: "location",
-    href: "https://maps.app.goo.gl/nFxTCEnzmupdo7yK7?g_st=ic",
+    href: `${contact.office.href}`,
   },
 ];
 
