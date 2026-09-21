@@ -44,7 +44,7 @@ export default function CarTypes({ eyebrow, heading, items }) {
                 variants={{ hover: { scale: 1.08 } }}
                 transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
               />
-              <div className="absolute inset-0 bg-linear-to-b from-[rgba(11,13,18,0.05)] to-[rgba(11,13,18,0.55)]" />
+              <div className="absolute inset-0 bg-linear-to-b from-[rgba(11,13,18,0.05)] to-[rgba(11,13,18,0.40)]" />
               <span className="absolute bottom-4.5 left-4.5 text-lg font-bold text-white">
                 {item.label}
               </span>

@@ -70,11 +70,14 @@ export default function Fleet({ id, eyebrow, heading, cars, viewAllCta }) {
                 </ul>
                 <div className="flex items-center justify-between">
                   <p className="m-0">
+                    <span className="block text-xs text-primary">
+                      Starting Price
+                    </span>
                     <span className="font-bold text-ink">
-                      ${car.price} {car.currency}
+                      {car.price} {car.currency}
                     </span>{" "}
                     <span className="text-sm text-ink-faint">
-                      /{car.period}
+                      / {car.period}
                     </span>
                   </p>
                   <a
@@ -89,12 +92,6 @@ export default function Fleet({ id, eyebrow, heading, cars, viewAllCta }) {
             </motion.article>
           ))}
         </motion.div>
-
-        <div className="mt-10 flex justify-center">
-          <a href={viewAllCta.href} className="btn btn-primary">
-            {viewAllCta.label}
-          </a>
-        </div>
       </div>
     </section>
   );

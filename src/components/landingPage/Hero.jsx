@@ -20,7 +20,7 @@ export default function Hero({
         alt={image.alt}
         className="absolute inset-0 h-full w-full object-cover object-[center_20%]"
       />
-      <div className="absolute inset-0 bg-linear-to-b from-[rgba(11,13,18,0.45)] via-[rgba(11,13,18,0.25)] to-[rgba(11,13,18,0.55)]" />
+      <div className="absolute inset-0 bg-linear-to-b from-[rgba(11,13,18,0.35)] via-[rgba(11,13,18,0.15)] to-[rgba(11,13,18,0.45)]" />
       <motion.div
         className="wrap relative z-1 flex flex-col items-center py-16 text-center"
         variants={staggerContainer(0.15)}
