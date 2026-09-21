@@ -296,22 +296,40 @@ export const promo = {
   },
 };
 
-export const amenities = {
-  eyebrow: "Modern Amenities",
-  heading: "Reliable Road Power",
-  features: [
-    { icon: "navigation", label: "GPS Navigation" },
-    { icon: "shield", label: "Insurance Coverage" },
-    { icon: "calendar", label: "Flexible Booking" },
-    { icon: "tag", label: "Affordable Pricing" },
-    { icon: "leaf", label: "Eco-Friendly" },
-    { icon: "road", label: "Unlimited Mileage" },
-  ],
-  images: [
-    { src: "/images/amenities-interior-1.svg", alt: "Car rear seats interior" },
+export const rentalCategories = {
+  heading: "Our rental categories",
+  items: [
     {
-      src: "/images/amenities-interior-2.svg",
-      alt: "Car steering wheel and dashboard",
+      id: "business",
+      label: "Business",
+      image: {
+        src: "https://res.cloudinary.com/dirbnpgsp/image/upload/v1789985043/Workspace/elmenshawi/WhatsApp_Image_2026-09-20_at_22.10.11_e1tywn.jpg",
+        alt: "Business rental car with a client dressed for a formal event",
+      },
+    },
+    {
+      id: "family",
+      label: "Family",
+      image: {
+        src: "https://cdn.prod.website-files.com/66dc179a1d6aa88848a4efb4/67503e9df37eca688967d1ab_category-03.avif",
+        alt: "Family loading an SUV for a trip",
+      },
+    },
+    {
+      id: "crossovers",
+      label: "City Crossovers",
+      image: {
+        src: "https://res.cloudinary.com/dirbnpgsp/image/upload/v1789996721/Workspace/elmenshawi/663126469_1378548000958228_932231066452021338_n_pseizn.jpg",
+        alt: "Off-road vehicle set up for an outdoor adventure",
+      },
+    },
+    {
+      id: "wedding",
+      label: "Wedding",
+      image: {
+        src: "https://cdn.prod.website-files.com/66dc179a1d6aa88848a4efb4/67503e655e4774eb97cc82ea_category-01.avif",
+        alt: "Car decorated with flowers for a wedding",
+      },
     },
   ],
 };

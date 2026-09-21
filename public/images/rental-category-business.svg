@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="600" viewBox="0 0 450 600">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A5CFF"/>
+      <stop offset="100%" stop-color="#2138C9"/>
+    </linearGradient>
+    <pattern id="p" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M0 28L28 0" stroke="#ffffff" stroke-opacity="0.06" stroke-width="2"/>
+    </pattern>
+  </defs>
+  <rect width="450" height="600" fill="url(#g)"/>
+  <rect width="450" height="600" fill="url(#p)"/>
+  <rect x="27" y="521" width="153" height="52" rx="26" fill="#000000" opacity="0.35"/>
+  <text x="103.5" y="547" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#ffffff" opacity="0.95">Business</text>
+</svg>

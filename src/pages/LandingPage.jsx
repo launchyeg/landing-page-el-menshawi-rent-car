@@ -4,7 +4,7 @@ import About from "../components/landingPage/About";
 import Fleet from "../components/landingPage/Fleet";
 import Services from "../components/landingPage/Services";
 import Promo from "../components/landingPage/Promo";
-import Amenities from "../components/landingPage/Amenities";
+import RentalCategories from "../components/landingPage/RentalCategories";
 import Testimonials from "../components/landingPage/Testimonials";
 import AppPromo from "../components/landingPage/AppPromo";
 import {
@@ -14,7 +14,7 @@ import {
   fleet,
   services,
   promo,
-  amenities,
+  rentalCategories,
   testimonials,
   appPromo,
 } from "../content/content";
@@ -31,7 +31,7 @@ export default function LandingPage() {
       <Fleet {...fleet} />
       <Services {...services} />
       <Promo {...promo} />
-      <Amenities {...amenities} />
+      <RentalCategories {...rentalCategories} />
       <Testimonials {...testimonials} />
       <AppPromo {...appPromo} />
     </>
