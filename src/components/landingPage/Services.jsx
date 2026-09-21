@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FiArrowRight } from "react-icons/fi";
+import { FiArrowUpRight } from "react-icons/fi";
 import {
   fadeUp,
   staggerContainer,
@@ -28,10 +28,14 @@ export default function Services({
           <h2 className="section-heading">{heading}</h2>
 
           <div className="mt-8 overflow-hidden rounded-2xl">
-            <img
+            <video
               src={images.main.src}
-              alt={images.main.alt}
-              className="aspect-4/3 w-full object-cover"
+              aria-label={images.main.alt}
+              className="aspect-4/2 w-full object-cover"
+              autoPlay
+              loop
+              muted
+              playsInline
             />
           </div>
 
@@ -44,19 +48,12 @@ export default function Services({
           >
             {items.map((item) => (
               <motion.li key={item.label} variants={staggerItem}>
-                <a
-                  href={item.href}
-                  className="group flex items-center gap-4 border-b border-border-soft py-4 text-ink transition-colors hover:text-primary"
-                >
+                <p className="flex items-center gap-4 border-b border-border-soft py-4 text-ink">
                   <span className="w-6 text-sm font-bold text-ink-faint">
                     {item.number}
                   </span>
                   <span className="flex-1 font-semibold">{item.label}</span>
-                  <FiArrowRight
-                    className="text-ink-faint transition-transform group-hover:translate-x-1"
-                    aria-hidden="true"
-                  />
-                </a>
+                </p>
               </motion.li>
             ))}
           </motion.ul>
@@ -77,9 +74,16 @@ export default function Services({
               className="aspect-square w-full object-cover"
             />
           </div>
-          <a href={viewAllCta.href} className="btn btn-outline self-start">
+          <motion.a
+            href={viewAllCta.href}
+            className="btn group border-ink bg-transparent text-ink hover:text-primary hover:border-primary self-start"
+          >
             {viewAllCta.label}
-          </a>
+            <FiArrowUpRight
+              aria-hidden="true"
+              className="transition-transform duration-300 group-hover:rotate-45"
+            />
+          </motion.a>
         </motion.div>
       </div>
     </section>

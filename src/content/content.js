@@ -9,7 +9,6 @@ export const navbar = {
     { label: "About us", href: "#about" },
     { label: "Car Fleet", href: "#fleet" },
     { label: "Services", href: "#services" },
-    { label: "Blogs", href: "#blog" },
   ],
   contactCta: { label: "Contact us", href: "#footer" },
 };
@@ -252,50 +251,49 @@ export const services = {
   heading: "Our Services",
   images: {
     main: {
-      src: "/images/services-main.svg",
+      src: "https://res.cloudinary.com/dirbnpgsp/video/upload/v1789993433/Workspace/elmenshawi/WhatsApp_Video_2026-09-21_at_15.22.39_dtfti0.mp4",
       alt: "Driver's point of view steering through the city",
     },
     secondary: {
-      src: "/images/services-secondary.svg",
+      src: "https://res.cloudinary.com/dirbnpgsp/image/upload/v1789986772/Workspace/elmenshawi/649251568_18028696208628614_51804009530412269_n_wcbqq1.webp",
       alt: "Luxury car with gull-wing door open",
     },
   },
   items: [
-    { number: "6", label: "Intercity Rides", href: "#" },
-    { number: "5", label: "24/7 Road Assistant", href: "#" },
-    { number: "4", label: "Chauffeur Services", href: "#" },
-    { number: "3", label: "Long-Term Leasing", href: "#" },
-    { number: "2", label: "Airport Transfers", href: "#" },
+    { number: "1", label: "Daily & Flexible Rental" },
+    { number: "2", label: "Airport Transfers" },
+    { number: "3", label: "Long-Term Leasing" },
+    { number: "4", label: "Chauffeur Services" },
+    { number: "5", label: "Intercity Rides" },
   ],
-  viewAllCta: { label: "View All Services", href: "#services" },
+  viewAllCta: { label: "Booking Now", href: "#booking" },
 };
 
 export const promo = {
   card: {
-    image: { src: "/images/promo-card.svg", alt: "Hand holding a car key" },
+    image: {
+      src: "https://res.cloudinary.com/dirbnpgsp/image/upload/v1789994555/Workspace/elmenshawi/675196f9d0ac88495bd32238_cards-01-p-500_mc0ayz.jpg",
+      alt: "Hand holding a car key",
+    },
     heading: "Affordable rentals, premium cars, unmatched service",
     cta: { label: "Rent a Car", href: "#fleet" },
   },
-  secondaryImages: [
-    { src: "/images/promo-secondary-1.svg", alt: "Hands exchanging a car key" },
-    {
-      src: "/images/promo-secondary-2.svg",
+  experience: {
+    image: {
+      src: "https://res.cloudinary.com/dirbnpgsp/image/upload/v1789994669/Workspace/elmenshawi/675196f22d1e5c9c1fae7a5a_cards-02-p-500_cloleb.jpg",
+      alt: "Hands exchanging a car key",
+    },
+    label: "Experience in Car Rentals",
+    value: "10+",
+  },
+  landscape: {
+    image: {
+      src: "https://res.cloudinary.com/dirbnpgsp/image/upload/v1789994558/Workspace/elmenshawi/646128647_18027212459628614_79292570416733246_n_aczihg.jpg",
       alt: "SUV parked on a hilltop landscape",
     },
-  ],
-};
-
-export const stats = {
-  experience: {
-    value: "10+",
-    label: "Experience in Car Rentals",
-    image: {
-      src: "/images/stats-experience.svg",
-      alt: "Close-up of hand on a steering wheel",
-    },
+    tagline:
+      "Your ultimate travel companion for seamless car rentals, wherever the road takes you.",
   },
-  tagline:
-    "Your ultimate travel companion for seamless car rentals, wherever the road takes you.",
 };
 
 export const amenities = {
@@ -350,42 +348,6 @@ export const testimonials = {
   },
 };
 
-export const blog = {
-  id: "blog",
-  eyebrow: "Blogs",
-  heading: "Latest Articles",
-  posts: [
-    {
-      id: "choosing-the-right-rental-car",
-      image: "/images/blog-post-1.svg",
-      title:
-        "The complete guide to choosing the right rental car for your next adventure",
-      date: "Dec 5, 2024",
-      category: "Road Trips",
-      href: "#",
-    },
-    {
-      id: "stress-free-road-trip",
-      image: "/images/blog-post-2.svg",
-      title:
-        "How to plan a stress-free road trip using a reliable rental car service",
-      date: "Dec 5, 2024",
-      category: "Eco Friendly",
-      href: "#",
-    },
-    {
-      id: "electric-hybrid-benefits",
-      image: "/images/blog-post-3.svg",
-      title:
-        "Exploring the benefits of electric & hybrid vehicles in the car rental industry",
-      date: "Dec 5, 2024",
-      category: "Safe Driving",
-      href: "#",
-    },
-  ],
-  viewAllCta: { label: "View All Blogs", href: "#blog" },
-};
-
 export const appPromo = {
   heading: "Experience travel ease with our app",
   description:
@@ -424,7 +386,6 @@ export const footer = {
         { label: "Category", href: "#car-types" },
         { label: "Services", href: "#services" },
         { label: "Car Fleet", href: "#fleet" },
-        { label: "Blogs", href: "#blog" },
         { label: "Contact us", href: "#footer" },
       ],
     },

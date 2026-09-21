@@ -10,7 +10,7 @@ import { specIcons } from "../../lib/icons";
 
 const specOrder = ["seats", "bags", "transmission", "fuel"];
 
-export default function Fleet({ id, eyebrow, heading, cars, viewAllCta }) {
+export default function Fleet({ id, eyebrow, heading, cars }) {
   return (
     <section className="section section-alt" id={id}>
       <div className="wrap">
@@ -70,7 +70,7 @@ export default function Fleet({ id, eyebrow, heading, cars, viewAllCta }) {
                 </ul>
                 <div className="flex items-center justify-between">
                   <p className="m-0">
-                    <span className="block text-xs text-primary">
+                    <span className="mb-1 block text-xs font-bold text-primary">
                       Starting Price
                     </span>
                     <span className="font-bold text-ink">

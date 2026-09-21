@@ -4,10 +4,8 @@ import About from "../components/landingPage/About";
 import Fleet from "../components/landingPage/Fleet";
 import Services from "../components/landingPage/Services";
 import Promo from "../components/landingPage/Promo";
-import Stats from "../components/landingPage/Stats";
 import Amenities from "../components/landingPage/Amenities";
 import Testimonials from "../components/landingPage/Testimonials";
-import Blog from "../components/landingPage/Blog";
 import AppPromo from "../components/landingPage/AppPromo";
 import {
   hero,
@@ -16,10 +14,8 @@ import {
   fleet,
   services,
   promo,
-  stats,
   amenities,
   testimonials,
-  blog,
   appPromo,
 } from "../content/content";
 
@@ -35,10 +31,8 @@ export default function LandingPage() {
       <Fleet {...fleet} />
       <Services {...services} />
       <Promo {...promo} />
-      <Stats {...stats} />
       <Amenities {...amenities} />
       <Testimonials {...testimonials} />
-      <Blog {...blog} />
       <AppPromo {...appPromo} />
     </>
   );
