@@ -18,7 +18,7 @@ export default function Hero({
       <img
         src={image.src}
         alt={image.alt}
-        className="absolute inset-0 h-full w-full object-cover object-[center_20%]"
+        className="absolute inset-0 h-full w-full object-cover"
         fetchPriority="high"
         decoding="async"
       />
@@ -37,7 +37,7 @@ export default function Hero({
         </motion.h1>
         <motion.h2
           variants={staggerItem}
-          className="-mt-1 max-w-3xl font-heading text-[clamp(2.25rem,4vw+1rem,3.25rem)] leading-tight font-semibold tracking-tight text-primary"
+          className="px-4 max-w-3xl bg-primary font-heading text-[clamp(2.25rem,4vw+1rem,3.25rem)] leading-tight font-semibold tracking-tight text-white"
         >
           {subheading}
         </motion.h2>

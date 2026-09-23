@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
+import { FaStar } from "react-icons/fa6";
+import { FcGoogle } from "react-icons/fc";
 import { fadeUp, viewportOnce } from "../../lib/motion";
 import { LuUserRound } from "react-icons/lu";
 
@@ -9,7 +11,7 @@ const image = {
   alt: "Woman smiling behind the wheel of a car",
 };
 
-export default function Testimonials({ eyebrow, heading, items }) {
+export default function Testimonials({ eyebrow, heading, google, items }) {
   const [index, setIndex] = useState(0);
   const active = items[index];
 
@@ -97,6 +99,48 @@ export default function Testimonials({ eyebrow, heading, items }) {
           />
         </motion.div>
       </div>
+
+      {google && (
+        <motion.div
+          className="wrap mt-10 flex flex-col items-center justify-between gap-6 rounded-2xl bg-white p-6 shadow-card sm:flex-row sm:p-8"
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={viewportOnce}
+        >
+          <div className="flex items-center gap-4">
+            <FcGoogle className="h-10 w-10 shrink-0" aria-hidden="true" />
+            <div>
+              <div className="flex gap-0.5 text-amber-400" aria-hidden="true">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <FaStar key={i} />
+                ))}
+              </div>
+              <p className="mt-1 text-sm font-semibold text-ink">
+                {google.note}
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <a
+              href={google.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline"
+            >
+              {google.readCta}
+            </a>
+            <a
+              href={google.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary"
+            >
+              {google.writeCta}
+            </a>
+          </div>
+        </motion.div>
+      )}
     </section>
   );
 }

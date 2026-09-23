@@ -28,15 +28,12 @@ export default function Services({
           <h2 className="section-heading">{heading}</h2>
 
           <div className="mt-8 overflow-hidden rounded-2xl">
-            <video
+            <img
               src={images.main.src}
-              aria-label={images.main.alt}
-              className="aspect-4/2 w-full object-cover"
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="metadata"
+              alt={images.main.alt}
+              className="aspect-4/3 w-full object-cover"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 

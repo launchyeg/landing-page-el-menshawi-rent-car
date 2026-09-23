@@ -62,26 +62,14 @@ export default function Fleet({ id, eyebrow, heading, cars }) {
                     );
                   })}
                 </ul>
-                <div className="flex items-center justify-between">
-                  <p className="m-0">
-                    <span className="mb-1 block text-xs font-bold text-primary">
-                      Starting Price
-                    </span>
-                    <span className="font-bold text-ink">
-                      {car.price} {car.currency}
-                    </span>{" "}
-                    <span className="text-sm text-ink-faint">
-                      / {car.period}
-                    </span>
-                  </p>
-                  <a
-                    href={car.href}
-                    aria-label={`View ${car.name}`}
-                    className="inline-flex h-9.5 w-9.5 items-center justify-center rounded-full border border-border text-ink transition-colors hover:border-primary hover:bg-primary hover:text-white"
-                  >
-                    <FiArrowUpRight aria-hidden="true" />
-                  </a>
-                </div>
+                <a
+                  href={car.href}
+                  aria-label={`View ${car.name}`}
+                  className="inline-flex items-center gap-1.5 rounded-full bg-tag-bg px-3.5 py-2 text-xs font-bold text-primary transition-colors hover:bg-primary hover:text-white"
+                >
+                  Ask for Price
+                  <FiArrowUpRight aria-hidden="true" className="text-sm" />
+                </a>
               </div>
             </motion.article>
           ))}
