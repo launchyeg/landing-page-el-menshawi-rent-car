@@ -1,6 +1,6 @@
 // Maps string keys used in content.js to react-icons components, so content
 // stays plain data (JSON-serializable) instead of holding component references.
-import { FiBriefcase, FiSettings, FiDroplet } from "react-icons/fi";
+import { FiUsers, FiBriefcase, FiSettings, FiDroplet } from "react-icons/fi";
 import {
   FaFacebookF,
   FaInstagram,
@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa6";
 
 export const specIcons = {
+  seats: FiUsers,
   bags: FiBriefcase,
   transmission: FiSettings,
   fuel: FiDroplet,

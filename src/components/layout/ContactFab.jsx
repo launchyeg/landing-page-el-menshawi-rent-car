@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { FiPhoneCall, FiPlus } from "react-icons/fi";
+import { FiPhoneCall, FiX } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa6";
 
 // Floating action button pinned to the bottom-right of every page. Clicking
@@ -121,13 +121,22 @@ export default function ContactFab({ contact, social }) {
             aria-hidden="true"
           />
         )}
-        <motion.span
-          animate={{ rotate: open ? 135 : 0 }}
-          transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-          className="flex"
-        >
-          <FiPlus className="h-6 w-6" aria-hidden="true" />
-        </motion.span>
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.span
+            key={open ? "close" : "whatsapp"}
+            initial={{ rotate: -90, opacity: 0, scale: 0.6 }}
+            animate={{ rotate: 0, opacity: 1, scale: 1 }}
+            exit={{ rotate: 90, opacity: 0, scale: 0.6 }}
+            transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="flex"
+          >
+            {open ? (
+              <FiX className="h-6 w-6" aria-hidden="true" />
+            ) : (
+              <FaWhatsapp className="h-7 w-7" aria-hidden="true" />
+            )}
+          </motion.span>
+        </AnimatePresence>
       </motion.button>
     </div>
   );
